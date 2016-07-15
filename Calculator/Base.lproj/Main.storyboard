@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
@@ -258,6 +259,18 @@
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCj-fU-w4F" userLabel="clearButton">
+                                <rect key="frame" x="180" y="3" width="242" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="2JX-jK-PiJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="dsy-QD-n9R"/>
+                                    <constraint firstAttribute="width" constant="242" id="eVr-Yf-wpx"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nl0-q7-XXv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -269,12 +282,20 @@
                             <constraint firstItem="j2h-Y9-Rep" firstAttribute="centerY" secondItem="aTM-Vn-jE8" secondAttribute="centerY" constant="30" id="LSz-rm-OSO"/>
                             <constraint firstItem="aTM-Vn-jE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lth-tE-5K2"/>
                             <constraint firstAttribute="trailing" secondItem="gnz-nq-0fd" secondAttribute="trailing" id="NbI-4x-l6X"/>
+                            <constraint firstItem="nCj-fU-w4F" firstAttribute="leading" secondItem="aTM-Vn-jE8" secondAttribute="leading" id="Q9L-vD-Fp3"/>
                             <constraint firstItem="TXq-VC-N41" firstAttribute="top" secondItem="aTM-Vn-jE8" secondAttribute="top" constant="10" id="Sur-8v-8eO"/>
                             <constraint firstAttribute="trailing" secondItem="I8h-fs-C5c" secondAttribute="trailing" id="YqR-Id-Upy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gnz-nq-0fd" secondAttribute="bottom" id="aiA-t2-TeR"/>
                             <constraint firstItem="j2h-Y9-Rep" firstAttribute="centerX" secondItem="aTM-Vn-jE8" secondAttribute="centerX" id="eLf-dK-RVH"/>
                             <constraint firstItem="aTM-Vn-jE8" firstAttribute="trailing" secondItem="TXq-VC-N41" secondAttribute="trailing" constant="10" id="vgl-Us-3gn"/>
+                            <constraint firstItem="aTM-Vn-jE8" firstAttribute="top" secondItem="nCj-fU-w4F" secondAttribute="bottom" constant="5" id="vw5-yJ-FjY"/>
+                            <constraint firstItem="nCj-fU-w4F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="3" id="wzu-B5-zXx"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wzu-B5-zXx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="outputLabel" destination="TXq-VC-N41" id="3J3-NZ-109"/>
@@ -282,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="277"/>
+            <point key="canvasLocation" x="363" y="276"/>
         </scene>
     </scenes>
     <resources>
@@ -298,6 +319,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
